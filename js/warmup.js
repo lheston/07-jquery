@@ -6,15 +6,24 @@ h1.addEventListener('click', function(event){
 */
 
 'use strict';
+$(document).ready(function(){ 
+
+
 
 //Add an event listener so that when the mouse enters ('mouseenter')
 //the image, it's `src` changes to 'img/surprised.png'
 
 var img = document.querySelector('img');
-
+/*
 img.addEventListener('mouseenter', function(){
     img.setAttribute('src', 'img/surprised.png');
-});
+});*/
+
+//jquery
+
+$('img').mouseenter(function(){
+    $(this).attr('src','img/surprised.png')
+})
 
 
 //Extra: add an event listener so that when the mouse leaves ('mouseleave')
@@ -49,4 +58,6 @@ contentBtn.addEventListener('click', function(){
     var p = document.createElement('p');
     p.textContent = text;
     document.querySelector('#content').appendChild(p);
+});
+
 });
